@@ -1,0 +1,52 @@
+# Dependencias de Composer
+/vendor/
+
+# Archivos y directorios del entorno local
+/.env
+/.env.local
+/.env.*.local
+/.env.testing
+/.env.production
+
+# Archivos de configuración local del IDE
+/.vscode/
+/.idea/
+/nbproject/
+/*.code-workspace
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos generados automáticamente
+/public/storage
+/public/*.cache
+/storage/*.cache
+/storage/logs/*.log
+/storage/framework/sessions/*
+/storage/framework/cache/*
+/storage/framework/views/*
+
+# Archivos de caché de PHPUnit
+.phpunit.result.cache
+
+# Configuraciones locales de PHPUnit
+/phpunit.xml
+/phpunit.xml.dist
+
+# Archivos de configuración del servidor (opcional si se incluyen para entorno de desarrollo)
+*.local.php
+*.sublime-project
+*.sublime-workspace
+
+# Binarios y archivos compilados
+/.sass-cache/
+/node_modules/
+npm-debug.log*
+
+# Logs generales
+*.log
+
+# Caches
+/cache/
+

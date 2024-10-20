@@ -1,0 +1,24 @@
+# Habilitar la reescritura de URLs
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Establecer la raíz del proyecto (en caso de que no esté en la raíz del servidor)
+    # RewriteBase /nombre-del-proyecto/
+
+    # Redirigir todo a index.php si no es un archivo o directorio existente
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ index.php [QSA,L]
+</IfModule>
+
+# Evitar el acceso directo a ciertos archivos y directorios sensibles
+<FilesMatch "(\.env|composer\.json|composer\.lock|config\.php)">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Proteger directorios y archivos del framework y configuraciones
+<DirectoryMatch "^/(src|vendor|Core|config)/">
+    Order allow,deny
+    Deny from all
+</DirectoryMatch>
