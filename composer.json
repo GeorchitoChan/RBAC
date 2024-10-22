@@ -1,9 +1,10 @@
 {
     "name": "georchitochan/rbac",
+    "description": "Proyecto MVC con PHP puro y Composer",
     "type": "project",
     "autoload": {
         "psr-4": {
-            "Georchitochan\\Rbac\\": "src/"
+            "App\\": "src/"
         }
     },
     "authors": [
